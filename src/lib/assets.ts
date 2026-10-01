@@ -1,0 +1,152 @@
+// Figma에서 내보낸 이미지들. 파일은 public/figma/ 아래에 있고
+// `npm run assets` 로 scripts/figma-assets.json 의 URL에서 내려받는다.
+const f = (file: string) => `/figma/${file}`;
+
+export const A = {
+  // 네비게이션 바
+  navLogo: f("73db6.png"),
+  globe: f("1c593.png"),
+  globeRing: f("a4477.svg"),
+  weather: f("f2f21.png"),
+  bell: f("671e0.png"),
+  avatarRing: f("80bbb.svg"),
+  astronautFace: f("586bf.png"),
+  toggleTrackLight: f("48cb1.png"),
+  toggleKnobLight: f("5f9d8.png"),
+  toggleTrackDark: f("52d9a.png"),
+  toggleKnobDark: f("9487a.png"),
+
+  // 메인 로고 & 방 아이콘
+  heroLogo: f("35ed6.png"),
+  roomControl: f("4bb02.png"),
+  roomOrbit: f("b5821.png"),
+  roomMind: f("7b29e.png"),
+  roomDream: f("d490b.png"),
+  roomMySpace: f("5b8f7.png"),
+
+  // 즐겨찾기
+  favTodo: f("1ada9.png"),
+  favMemo: f("fb621.png"),
+  favTimer: f("d68ba.png"),
+  favPlane: f("3fe93.png"),
+  favAdd: f("f66d6.svg"),
+
+  // 공통
+  robot: f("a52dd.png"),
+  robotSmall: f("7d4db.png"),
+  circleArrow: f("239ec.svg"),
+  info: f("d0e99.svg"),
+  chevronRight: f("af58a.svg"),
+  arrowPrev: f("515ba.svg"),
+  arrowNext: f("58265.svg"),
+  editCircle: f("af070.svg"),
+  star: f("6607d.png"),
+
+  // 조종실
+  sleepIcon: f("b5476.png"),
+  emotionIcon: f("7e892.png"),
+  routineIcon: f("61d2c.png"),
+  sleepCardIcon: f("95c98.svg"),
+  exerciseCardIcon: f("aebb8.svg"),
+  missionWalk: f("b1e50.png"),
+  missionSprout: f("8f55e.png"),
+  orbitPlanet: f("b9f88.png"),
+  spaceRoom: {
+    window: f("2e7b5.png"),
+    room: f("d243f.png"),
+    telescope: f("d9aad.png"),
+    lamp: f("e6019.png"),
+    beanbag: f("ab20f.png"),
+    astronaut: f("6945c.png"),
+    plant: f("628f0.png"),
+  },
+  soundFocus: f("e3ec0.png"),
+  soundForest: f("34dfc.png"),
+  soundMoon: f("08875.png"),
+
+  // 궤도 관리실
+  emojiSunglasses: f("d54a1.png"),
+  emojiBook: f("72d50.png"),
+  emojiHearts: f("ffba7.png"),
+  emojiYawn: f("c41d0.png"),
+  emojiCamera: f("99a69.png"),
+  fabPlus: f("5d1a7.svg"),
+
+  // 마음 정류장
+  thermometer: f("56683.png"),
+  emotionOrbCalm: f("3dd0e.png"),
+  emotionOrbBright: f("4bf3e.png"),
+  talkBubble: f("34b68.png"),
+  blackhole: f("70ccd.png"),
+  cloud: f("ce6c1.png"),
+  bottleCalm: f("84008.png"),
+  bottleNight: f("db44a.png"),
+  bottleJoy: f("81faf.png"),
+  bottleLabel: f("604dc.png"),
+  rocket: f("eb713.png"),
+  moodFace: f("347b7.png"),
+  wind: f("e3d54.png"),
+  starSky: f("e5deb.png"),
+  starBig: f("bb04b.png"),
+  smallArrow: f("f7977.svg"),
+
+  // 꿈 기록실
+  dreamMoon: f("7ea87.png"),
+  plusCircle: f("7eda0.svg"),
+  tired: f("51296.png"),
+  constellation: f("1d1da.png"),
+  therapySpace: f("85411.png"),
+  therapyDelta: f("59976.png"),
+  therapyForest: f("5e980.png"),
+  therapyLibrary: f("48791.png"),
+
+  // 마이 스페이스
+  hexBg: f("50e68.png"),
+  hexStars: f("25ab2.png"),
+  planetSocial: f("09b66.png"),
+  planetMind: f("7234c.png"),
+  planetEnergy: f("cf851.png"),
+  planetGrowth: f("b4d77.png"),
+  planetEmotion: f("2ed28.png"),
+  planetFocus: f("70eda.png"),
+  hexCore: f("9754e.png"),
+  zz: f("5a58a.png"),
+  starBadge: f("6607d.png"),
+  heartStat: f("9f186.png"),
+  planetStat: f("61d2c.png"),
+  exerciseFrame: f("2e822.png"),
+  badgeExplorer: f("712ce.png"),
+  badgeSprout: f("8f55e.png"),
+  badgeStella: f("3feb8.png"),
+  badgeSparkle: f("ef821.png"),
+  nanomiFrame: f("79099.png"),
+  nanomi: f("b6ad6.png"),
+  closet: f("22947.png"),
+
+  // 푸터
+  footerStars: f("da81d.svg"),
+  footerRoom: f("247a0.png"),
+  footerLogo: f("a1e4e.png"),
+  appleLogo: f("adc31.svg"),
+  googleLogo: f("2bdfd.svg"),
+};
+
+export const dayTags = [
+  { label: "과식", icon: f("04a85.png") },
+  { label: "통증", icon: f("fd02d.png") },
+  { label: "스트레스", icon: f("335c1.png") },
+  { label: "피곤", icon: f("c41d0.png") },
+  { label: "월경", icon: f("732d7.png") },
+  { label: "커피", icon: f("df874.png") },
+  { label: "알코올", icon: f("7fc02.png") },
+  { label: "야식", icon: f("d9a6a.png") },
+  { label: "아픔", icon: f("591e0.png") },
+  { label: "수면제", icon: f("9aa89.png") },
+  { label: "운동", icon: f("93163.png") },
+  { label: "스트레칭", icon: f("eb818.png") },
+  { label: "따뜻한 목욕", icon: f("80de4.png") },
+  { label: "낮잠", icon: f("5d3e6.png") },
+  { label: "공부", icon: f("5379a.png") },
+  { label: "알바", icon: f("603e3.png") },
+  { label: "여가활동", icon: f("6a617.png") },
+];

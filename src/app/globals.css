@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DNF Bit Bit v2";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/DNFBitBitv2.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* 디자인 시스템 토큰 (Figma: 디자인 시스템 > 컬러) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-normal: #b9c4ff;
+  --primary-strong: #758dff;
+  --primary-neutral: #dbe2ff;
+  --primary-neutral-2: #e2e9ff;
+  --secondary-normal: #c7b6ff;
+  --secondary-strong: #b7a1ff;
+  --secondary-neutral: #ddd3ff;
+  --accent-normal: #b1ffe5;
+  --accent-strong: #80ffd4;
+  --light-1: #f5f7fb;
+  --light-2: #eff3ff;
+  --light-3: #e2e9ff;
+  --dark-1: #1e2233;
+  --dark-2: #3b4057;
+  --label-3: #47484c;
+  --label-4: #848588;
+
+  --page: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f5f7fb;
+  --ink: #1e2233;
+  --ink-soft: #3b4057;
+  --ink-muted: #848588;
+  --line: #758dff;
+  --nav-band: rgba(177, 190, 255, 0.5);
+}
+
+[data-theme="dark"] {
+  --page: #17181a;
+  --surface: #2a2b2f;
+  --surface-muted: #23252c;
+  --ink: #ccd0e1;
+  --ink-soft: #959ec3;
+  --ink-muted: #959ec3;
+  --line: #758cff;
+  --nav-band: rgba(72, 78, 107, 0.5);
+  --light-2: #2f3345;
+  --light-3: #353a52;
+  --primary-neutral: #3a4170;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary-normal);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-neutral: var(--primary-neutral);
+  --color-primary-neutral-2: var(--primary-neutral-2);
+  --color-secondary: var(--secondary-normal);
+  --color-secondary-strong: var(--secondary-strong);
+  --color-secondary-neutral: var(--secondary-neutral);
+  --color-accent: var(--accent-normal);
+  --color-accent-strong: var(--accent-strong);
+  --color-light-1: var(--light-1);
+  --color-light-2: var(--light-2);
+  --color-light-3: var(--light-3);
+  --color-dark-1: var(--dark-1);
+  --color-dark-2: var(--dark-2);
+  --color-label-3: var(--label-3);
+  --color-label-4: var(--label-4);
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-nav-band: var(--nav-band);
+
+  --font-sans: var(--font-pretendard), "Pretendard", system-ui, sans-serif;
+  --font-pixel: var(--font-galmuri), "Galmuri11", monospace;
+  --font-dot: "DungGeunMo", var(--font-galmuri), monospace;
+  --font-bit: "DNF Bit Bit v2", var(--font-galmuri-bold), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--page);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Figma 카드 규칙: stroke 1.5, radius 16 */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+}
+
+.card-lg {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 32px;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
