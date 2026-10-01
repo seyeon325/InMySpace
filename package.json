@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "assets": "node scripts/fetch-figma-assets.mjs"
   },
   "dependencies": {
     "galmuri": "^2.40.3",

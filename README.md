@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InMySpace · 인마이스페이스
 
-## Getting Started
+수면, 마음 건강, 루틴을 한곳에서 관리하는 웹앱입니다. Figma 디자인을 Next.js로 옮겼습니다.
 
-First, run the development server:
+## 화면
+
+| 경로 | 이름 | 내용 |
+|---|---|---|
+| `/` | 조종실 | 오늘의 요약, 데일리 오비트, 마이 스페이스 룸, 궤도 시그널 |
+| `/orbit` | 궤도 관리실 | 주간 플래너, 할 일, 루틴, 밀린 할 일, 집중 타이머와 메모 |
+| `/mind` | 마음 정류장 | 감정 일기 캘린더, 감정 온도계, 블랙홀, 감정 보틀, 마음 운동 |
+| `/dream` | 꿈 기록실 | 수면 요약과 점수, 꿈 메모, 하루 기록, 수면 단계, 슬립 테라피 |
+| `/my-space` | 마이 스페이스 | 정신 건강 육각형, 통계, 배지, 나노미 |
+
+## 기술 스택
+
+Next.js (App Router) · React · TypeScript · Tailwind CSS v4 · zustand
+
+데이터는 브라우저 localStorage에 저장됩니다(키 `inmyspace`). 서버나 로그인은 아직 없습니다.
+
+## 실행
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run assets   # Figma 이미지를 public/figma 로 내려받기 (최초 1회)
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run assets`는 `scripts/figma-assets.json`에 적힌 Figma 이미지 주소에서 파일을 받습니다. 이 주소는 발급 후 약 7일 동안만 유효합니다. 이미지가 `public/figma`에 커밋된 뒤에는 이 단계가 필요 없습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 폴더
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app` 각 화면
+- `src/components` 공통 UI (내비게이션, 카드, 모달 등)
+- `src/lib/store.ts` 상태와 점수 계산
+- `src/lib/assets.ts` Figma 이미지 목록
