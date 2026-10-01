@@ -23,7 +23,7 @@ export function RoomNav() {
         <Px src={A.heroLogo} alt="IN MY SPACE" className="aspect-square w-full" />
       </Link>
 
-      <nav aria-label="방 이동" className="relative -mt-8 md:-mt-[100px]">
+      <nav aria-label="방 이동" className="relative -mt-4 md:-mt-[60px]">
         <div className="absolute inset-x-0 bottom-0 h-[56%] rounded-[30px] bg-nav-band" />
         <ul className="relative grid grid-cols-5 px-1 pb-3 md:px-[60px] md:pb-5">
           {ROOMS.map((room) => {
